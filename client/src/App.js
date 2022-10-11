@@ -7,7 +7,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 
 function App() {
-  const socket = io.connect("http://localhost:3001");
+  const socket = io.connect(
+    "https://phongnd-react-chat-realtime.herokuapp.com/"
+  ); // io.connect("http://localhost:3001");
   const [userName, setUserName] = useState("");
   const [room, setRoom] = useState("");
   const [isShowChat, setShowChat] = useState(false);
